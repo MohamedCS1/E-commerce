@@ -1,8 +1,11 @@
 package ui.DetailProducts
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import com.example.ecommerce.R
 
@@ -21,6 +24,7 @@ class Detail_Product : AppCompatActivity() {
         val tv_description = findViewById<TextView>(R.id.tv_d_description)
         val image_view = findViewById<ImageView>(R.id.imageView_d)
         val bu_call = findViewById<Button>(R.id.bu_call)
+        val bu_back = findViewById<ImageButton>(R.id.bu_back)
 
         val bundle = intent.extras
 
@@ -38,7 +42,12 @@ class Detail_Product : AppCompatActivity() {
         Glide.with(this).load(image_url).placeholder(R.drawable.placeholderimg).into(image_view)
 
         bu_call.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_DIAL, Uri.fromParts("tel","0552938510",null)))
 
+        }
+
+        bu_back.setOnClickListener {
+            onBackPressed()
         }
     }
 }

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context="ui.DetailProducts.Detail_Product">
+    tools:context="ui.DetailProducts.Detail_Product"
+    >
 
     <LinearLayout
         android:id="@+id/main_la"
@@ -14,7 +15,6 @@
         android:layout_marginBottom="0dp"
         android:backgroundTint="@color/white"
         android:orientation="vertical">
-
         <LinearLayout
             android:id="@+id/dfg"
             android:layout_width="match_parent"

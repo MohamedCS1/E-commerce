@@ -2,6 +2,8 @@ package ui.main
 
 import Pojo.Product_Model
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.util.Log
@@ -43,7 +45,6 @@ class Adapter_Products(val context: Context):RecyclerView.Adapter<Adapter_Produc
         Glide.with(context).load(url).placeholder(R.drawable.placeholderimg).into(holder.image_product)
 
         holder.card_product.setOnClickListener {
-
             val intent = Intent(context,Detail_Product::class.java)
             intent.putExtra("title",arraylist[position].title)
             intent.putExtra("price",arraylist[position].price.toString())
@@ -54,7 +55,6 @@ class Adapter_Products(val context: Context):RecyclerView.Adapter<Adapter_Produc
         }
 
         holder.bu_details.setOnClickListener{
-
             val intent = Intent(context,Detail_Product::class.java)
             intent.putExtra("title",arraylist[position].title)
             intent.putExtra("price",arraylist[position].price.toString())
