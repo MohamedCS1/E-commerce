@@ -8,11 +8,13 @@
     android:layout_gravity="center"
     app:cardUseCompatPadding="true"
     app:cardElevation="4dp"
+    android:id="@+id/card_product"
     android:gravity="center"
     app:cardCornerRadius="10pt"
     android:layout_margin="2pt">
 
     <LinearLayout
+        android:id="@+id/card_product_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4pt"
@@ -55,6 +57,7 @@
             android:textStyle="bold|italic" />
 
         <Button
+            android:id="@+id/bu_details"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"

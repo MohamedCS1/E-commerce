@@ -38,6 +38,7 @@
             </androidx.appcompat.widget.AppCompatImageButton>
 
             <TextView
+                android:id="@+id/tv_d_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -78,32 +79,35 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginTop="200dp"
-                    android:layout_marginEnd="10dp"
-                    android:text="10000$"
-                    android:textColor="@color/purple_500"
-                    android:textStyle="bold">
-
-                </TextView>
-
-
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/imageView_d"
                     android:layout_width="match_parent"
                     android:layout_height="247dp"
                     android:layout_marginStart="2pt"
                     android:layout_marginTop="2pt"
                     android:layout_marginEnd="2pt"
                     android:layout_marginBottom="2pt"
-                    app:srcCompat="@drawable/placeholderimg" />
+                    android:background="@color/white" />
+                    <TextView
+                        android:id="@+id/tv_d_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="200dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="200"
+                        android:textColor="#72C834"
+                        android:drawableLeft="@drawable/bg"
+                        android:drawablePadding="0dp"
+                        android:textSize="7pt"
+                        android:textStyle="bold|italic" />
+
 
             </RelativeLayout>
 
@@ -118,6 +122,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/tv_d_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -127,6 +132,39 @@
                 android:textColor="#AE000000"
                 android:textSize="8pt"
                 android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="3pt"
+                android:layout_marginBottom="3pt"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:paddingLeft="3pt"
+                    android:text="Category :"
+                    android:gravity="center"
+                    android:textColor="#F44336"
+                    android:textSize="10pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_d_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingLeft="3pt"
+                    android:gravity="center"
+                    android:text="Molaya"
+                    android:textColor="#AE000000"
+                    android:textSize="10pt"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
 
 
             <LinearLayout
@@ -215,7 +253,6 @@
         android:layout_height="1pt"
         android:layout_alignTop="@+id/bu_call"
         android:background="#25444444">
-
     </View>
 
     <androidx.appcompat.widget.AppCompatButton

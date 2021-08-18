@@ -4,14 +4,14 @@ import Pojo.Product_Model
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.media.Image
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.net.toUri
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.ecommerce.R
@@ -42,8 +42,26 @@ class Adapter_Products(val context: Context):RecyclerView.Adapter<Adapter_Produc
         val url = arraylist[position].image
         Glide.with(context).load(url).placeholder(R.drawable.placeholderimg).into(holder.image_product)
 
-        holder.image_product.setOnClickListener {
-            context.startActivities(arrayOf(Intent(context,Detail_Product::class.java)))
+        holder.card_product.setOnClickListener {
+
+            val intent = Intent(context,Detail_Product::class.java)
+            intent.putExtra("title",arraylist[position].title)
+            intent.putExtra("price",arraylist[position].price.toString())
+            intent.putExtra("category" ,arraylist[position].category.toString())
+            intent.putExtra("description" ,arraylist[position].description.toString())
+            intent.putExtra("image_url",arraylist[position].image)
+            context.startActivities(arrayOf(intent))
+        }
+
+        holder.bu_details.setOnClickListener{
+
+            val intent = Intent(context,Detail_Product::class.java)
+            intent.putExtra("title",arraylist[position].title)
+            intent.putExtra("price",arraylist[position].price.toString())
+            intent.putExtra("category" ,arraylist[position].category.toString())
+            intent.putExtra("description" ,arraylist[position].description.toString())
+            intent.putExtra("image_url",arraylist[position].image)
+            context.startActivities(arrayOf(intent))
         }
 
     }
@@ -60,6 +78,8 @@ class Adapter_Products(val context: Context):RecyclerView.Adapter<Adapter_Produc
         val tv_price = itemView.findViewById<TextView>(R.id.tv_price)
 //        val tv_description = itemView.findViewById<TextView>(R.id.tv_description)
 //        val tv_category = itemView.findViewById<TextView>(R.id.tv_category)
+        val card_product = itemView.findViewById<CardView>(R.id.card_product)
+        val bu_details = itemView.findViewById<Button>(R.id.bu_details)
     }
 
     @SuppressLint("NotifyDataSetChanged")
