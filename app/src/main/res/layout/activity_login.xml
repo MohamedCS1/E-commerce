@@ -9,9 +9,9 @@
     tools:context="ui.Login.Login">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/image_logo"
         android:layout_width="match_parent"
-        android:layout_height="165dp"
+        android:layout_height="153dp"
         android:layout_gravity="center"
         android:background="#001F4E"
         app:srcCompat="@drawable/logo" />
@@ -29,6 +29,7 @@
            <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
+               android:layout_marginBottom="9pt"
                android:orientation="vertical">
                <TextView
                    android:layout_width="match_parent"
@@ -146,17 +147,91 @@
                    android:layout_height="wrap_content"
                    android:layout_gravity="center"
                    android:layout_marginTop="7pt"
-                   android:paddingLeft="27pt"
-                   android:paddingRight="27pt"
+                   android:paddingLeft="49pt"
+                   android:paddingRight="49pt"
                    android:text="Login"
                    android:outlineAmbientShadowColor="@color/black"
                    android:outlineSpotShadowColor="@color/black"
                    android:elevation="4pt"
+                   android:layout_marginBottom="5pt"
                    android:backgroundTint="#63BBFF"
                    style="@style/AppTheme.RoundedCornerMaterialButton"
                    tools:targetApi="p">
 
                </androidx.appcompat.widget.AppCompatButton>
+
+               <TextView
+                   android:id="@+id/tv_skip"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   android:text="Skip"
+                   android:layout_marginTop="8pt"
+                   android:textColor="@color/teal_200">
+
+               </TextView>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center"
+                   android:gravity="center"
+                   android:orientation="horizontal">
+
+                   <androidx.appcompat.widget.AppCompatButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="20pt"
+                       android:layout_gravity="center"
+                       android:layout_marginTop="7pt"
+                       android:outlineAmbientShadowColor="@color/black"
+                       android:outlineSpotShadowColor="@color/black"
+                       android:elevation="4pt"
+                       android:foregroundGravity="center"
+                       android:layout_marginBottom="5pt"
+                       android:backgroundTint="#f35c5c"
+                       style="@style/AppTheme.RoundedCornerMaterialButton"
+                       tools:targetApi="p">
+
+                   </androidx.appcompat.widget.AppCompatButton>
+
+                   <androidx.appcompat.widget.AppCompatButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="20pt"
+                       android:layout_gravity="center"
+                       android:layout_marginTop="7pt"
+                       android:outlineAmbientShadowColor="@color/black"
+                       android:outlineSpotShadowColor="@color/black"
+                       android:elevation="4pt"
+                       android:foreground="@drawable/icon_facebook"
+                       android:layout_marginLeft="7pt"
+                       android:layout_marginRight="7pt"
+                       android:foregroundGravity="center"
+                       android:layout_marginBottom="5pt"
+                       android:backgroundTint="#1353aa"
+                       style="@style/AppTheme.RoundedCornerMaterialButton"
+                       tools:targetApi="p">
+
+                   </androidx.appcompat.widget.AppCompatButton>
+
+                   <androidx.appcompat.widget.AppCompatButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="20pt"
+                       android:layout_gravity="center"
+                       android:layout_marginTop="7pt"
+                       android:outlineAmbientShadowColor="@color/black"
+                       android:outlineSpotShadowColor="@color/black"
+                       android:elevation="4pt"
+                       android:foreground="@drawable/icon_twitter"
+                       android:foregroundGravity="center"
+                       android:layout_marginBottom="5pt"
+                       android:backgroundTint="#0ba9ff"
+                       style="@style/AppTheme.RoundedCornerMaterialButton"
+                       tools:targetApi="p">
+
+                   </androidx.appcompat.widget.AppCompatButton>
+
+               </LinearLayout>
            </LinearLayout>
        </ScrollView>
     </LinearLayout>
