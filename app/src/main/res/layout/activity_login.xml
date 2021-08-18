@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#001F4E"
+    tools:context="ui.Login.Login">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:layout_gravity="center"
+        android:background="#001F4E"
+        app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_login">
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="Hey,\nLogin Now."
+                   android:textColor="@color/black"
+                   android:textStyle="bold"
+                   android:layout_marginTop="5pt"
+                   android:layout_marginLeft="10pt"
+                   android:textSize="18pt"/>
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:gravity="center"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_marginTop="5pt">
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:text="if you are new   /"
+                       android:textColor="#66000000"
+                       android:textStyle="bold"
+                       android:gravity="center"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="10pt"
+                       android:textSize="10pt"/>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:text="Create New"
+                       android:textColor="#CD000000"
+                       android:textStyle="bold"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       android:layout_marginLeft="3pt"
+                       android:textSize="10pt"/>
+               </LinearLayout>
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_marginTop="20pt"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="8pt"
+                   android:layout_marginRight="8pt"
+                   >
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="Email"
+                       android:paddingStart="0dp"
+                       android:paddingEnd="0dp"
+                       android:drawablePadding="5pt"
+                       android:backgroundTint="@color/white"
+                       android:inputType="textEmailAddress">
+                   </com.google.android.material.textfield.TextInputEditText>
+
+
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <com.google.android.material.textfield.TextInputLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="8pt"
+                   android:layout_marginRight="8pt"
+                   android:layout_marginTop="10pt"
+                   app:passwordToggleEnabled="true"
+                   app:passwordToggleTint="#2289FF">
+
+                   <com.google.android.material.textfield.TextInputEditText
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:hint="Password"
+                       android:backgroundTint="@color/white"
+                       android:inputType="textPassword"
+                       android:paddingStart="0dp"
+                       android:paddingEnd="0dp"
+                       >
+                   </com.google.android.material.textfield.TextInputEditText>
+               </com.google.android.material.textfield.TextInputLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   >
+                   <CheckBox
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Save Password"
+                       android:layout_marginLeft="8pt"
+                       android:layout_marginTop="4pt"
+                       android:textStyle="bold"
+                       android:textColor="#B7000000"
+                       >
+
+                   </CheckBox>
+
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:layout_gravity="end|center"
+                       android:layout_marginTop="2.5pt"
+                       android:layout_marginRight="8pt"
+                       android:gravity="end|center_vertical"
+                       android:text="forgot password"
+                       android:textStyle="bold"
+                       android:textColor="#B7000000"
+                       android:textSize="7pt">
+                   </TextView>
+               </LinearLayout>
+
+               <androidx.appcompat.widget.AppCompatButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="7pt"
+                   android:paddingLeft="27pt"
+                   android:paddingRight="27pt"
+                   android:text="Login"
+                   android:outlineAmbientShadowColor="@color/black"
+                   android:outlineSpotShadowColor="@color/black"
+                   android:elevation="4pt"
+                   android:backgroundTint="#63BBFF"
+                   style="@style/AppTheme.RoundedCornerMaterialButton"
+                   tools:targetApi="p">
+
+               </androidx.appcompat.widget.AppCompatButton>
+           </LinearLayout>
+       </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

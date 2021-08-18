@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ui.main.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            app:layout_scrollFlags="scroll"
+            tools:ignore="InvalidId">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#4444"
+                    android:paddingLeft="5pt"
+                    android:text="Categories"
+                    android:textColor="#33357c"
+                    android:textSize="17pt"
+                    android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4pt"
+                    android:layout_marginTop="2pt"
+                    android:layout_marginLeft="2pt"
+                    android:orientation="horizontal">
+                    <androidx.appcompat.widget.SearchView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2pt"
+                        android:iconifiedByDefault="false"
+                        app:queryHint="Search Here"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_card"
+                        >
+                    </androidx.appcompat.widget.SearchView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_categories"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingLeft="2pt">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rv_Products"
+          android:layout_width="match_parent"
+          android:orientation="vertical"
+          android:layout_height="match_parent"
+          app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+      </androidx.recyclerview.widget.RecyclerView>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bu_scroll_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="9pt"
+        android:backgroundTint="#b0b5eb"
+        android:src="@drawable/icon_scrolltop"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

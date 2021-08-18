@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp"
+    android:gravity="center"
+    app:cardCornerRadius="10pt"
+    android:layout_margin="2pt">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4pt"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_product"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="6pt"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8pt"
+            android:gravity="center"
+            android:text="AR UI Trends 2002"
+            android:textColor="#33357c"
+            android:textSize="7pt"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2pt"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="200"
+            android:textColor="#72C834"
+            android:drawableLeft="@drawable/bg"
+            android:drawablePadding="0dp"
+            android:textSize="7pt"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="+ View Details"
+            android:layout_gravity="center"
+            android:textColor="@color/purple_500"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush"
+            android:textStyle="normal"
+            android:textSize="8pt"
+        />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

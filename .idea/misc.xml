@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/drawable/bg_card.xml" value="0.2" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/drawable/bg_login.xml" value="0.30234375" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/drawable/icon_back.xml" value="0.22" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/drawable/rounded_shape.xml" value="0.237890625" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/layout-v28/activity_login.xml" value="0.30104166666666665" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/layout-v28/card_product.xml" value="0.28940217391304346" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/layout/activity_detail_product.xml" value="0.1716728280961183" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/layout/activity_login.xml" value="0.16" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/layout/card_categories.xml" value="0.25" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/layout/card_product.xml" value="0.22" />
+        <entry key="..\:/Android/Projects/ecommerce/app/src/main/res/layout/progress_load.xml" value="0.1640625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
