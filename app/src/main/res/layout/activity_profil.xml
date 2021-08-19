@@ -8,42 +8,44 @@
     android:background="#11000000">
 
     <LinearLayout
-        android:layout_width="413dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="80dp"
+        android:background="@drawable/bg_login"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/bu_back_profil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:paddingLeft="4pt"
             android:layout_marginLeft="13pt"
+            android:layout_marginTop="30dp"
             android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:paddingLeft="4pt"
             app:srcCompat="@drawable/icon_back" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
             android:gravity="center"
             android:text="Billy Gomaz"
             android:textColor="@color/black"
             android:textSize="12pt"
-            android:layout_marginTop="20pt"
             android:textStyle="bold" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5pt"
             android:gravity="center"
             android:text="New York,USA"
             android:textColor="#B0000000"
             android:textSize="9pt"
-            android:layout_marginTop="5pt"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -51,27 +53,29 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4pt"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="5pt"
+                android:layout_marginRight="15pt"
+                android:layout_weight="1"
                 android:gravity="right"
                 android:text="1,204"
                 android:textColor="#707BF8"
                 android:textSize="10pt"
-                android:layout_marginRight="15pt"
-                android:layout_weight="1"
-                android:layout_marginTop="5pt"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="18pt"
+                android:layout_marginTop="5pt"
+                android:layout_weight="1"
                 android:gravity="left"
                 android:text="310"
                 android:textColor="#707BF8"
                 android:textSize="10pt"
-                android:layout_weight="1"
-                android:layout_marginLeft="18pt"
-                android:layout_marginTop="5pt"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -79,39 +83,42 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="1pt"
+                android:layout_marginRight="8pt"
+                android:layout_weight="1"
                 android:gravity="right"
                 android:text="followers"
                 android:textColor="#707BF8"
                 android:textSize="8pt"
-                android:layout_marginRight="8pt"
-                android:layout_weight="1"
-                android:layout_marginTop="1pt"
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="8pt"
+                android:layout_marginTop="1pt"
+                android:layout_weight="1"
                 android:gravity="left"
                 android:text="followings"
                 android:textColor="#707BF8"
                 android:textSize="8pt"
-                android:layout_weight="1"
-                android:layout_marginLeft="8pt"
-                android:layout_marginTop="1pt"
                 android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <View
-            android:layout_marginTop="10pt"
             android:layout_width="match_parent"
             android:layout_height="0.7pt"
-            android:background="#20000000"
-            >
+            android:layout_marginTop="10pt"
+            android:background="#20000000">
 
         </View>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -121,12 +128,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5pt"
+                android:layout_marginTop="1pt"
                 android:gravity="left"
                 android:text="Saved"
                 android:textColor="#FA5A72"
                 android:textSize="8pt"
-                android:layout_marginLeft="5pt"
-                android:layout_marginTop="1pt"
                 android:textStyle="bold" />
 
             <ImageView
@@ -134,42 +141,43 @@
                 android:layout_width="8pt"
                 android:layout_height="8pt"
                 android:layout_gravity="center"
-                android:foregroundGravity="center"
                 android:layout_marginLeft="3pt"
                 android:layout_marginTop="1pt"
+                android:foregroundGravity="center"
                 app:srcCompat="@drawable/saved" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="1pt"
+                android:layout_marginRight="2pt"
+                android:layout_weight="1"
                 android:gravity="right"
                 android:text="See All"
                 android:textColor="#86000000"
                 android:textSize="8pt"
-                android:layout_weight="1"
-                android:layout_marginRight="2pt"
-                android:layout_marginTop="1pt"
                 android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0.5pt"
                 android:layout_gravity="center"
+                android:layout_marginTop="0.5pt"
                 android:layout_marginRight="5pt"
                 app:srcCompat="@drawable/ic_see_all" />
 
 
         </LinearLayout>
+
         <View
-            android:layout_marginTop="5pt"
             android:layout_width="match_parent"
             android:layout_height="0.7pt"
-            android:background="#20000000"
-            >
+            android:layout_marginTop="5pt"
+            android:background="#20000000">
 
         </View>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_saved"
             android:layout_width="match_parent"

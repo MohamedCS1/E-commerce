@@ -1,11 +1,11 @@
 package ui.Profil
 
 import Pojo.Product_Model
-import android.graphics.drawable.Drawable
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.ProgressBar
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,13 +17,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
-import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.request.RequestOptions
-
-import android.R.attr.x
-
-
-
 
 
 class Profil : AppCompatActivity() {
@@ -37,6 +31,8 @@ class Profil : AppCompatActivity() {
         val image_profil = findViewById<ImageView>(R.id.image_profil)
 
 //        CropImage.activity().setGuidelines(CropImageView.Guidelines.ON).start(this)
+
+        val progress = findViewById<ProgressBar>(R.id.prgress_rv)
 
         val rv = findViewById<RecyclerView>(R.id.rv_saved)
 

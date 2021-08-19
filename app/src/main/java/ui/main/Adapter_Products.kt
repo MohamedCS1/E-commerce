@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
@@ -67,6 +68,7 @@ class Adapter_Products(val context: Context):RecyclerView.Adapter<Adapter_Produc
     }
 
     override fun getItemCount(): Int {
+
         return arraylist.size
     }
 
@@ -86,7 +88,13 @@ class Adapter_Products(val context: Context):RecyclerView.Adapter<Adapter_Produc
     fun setList(ArrayList:ArrayList<Product_Model>)
     {
         this.arraylist = ArrayList
-        Log.d("res",arraylist.size.toString())
+        notifyDataSetChanged()
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun clear_array()
+    {
+        arraylist.clear()
         notifyDataSetChanged()
     }
 

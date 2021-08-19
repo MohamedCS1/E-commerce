@@ -102,6 +102,13 @@
           app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
       </androidx.recyclerview.widget.RecyclerView>
+    <ProgressBar
+        android:id="@+id/prgress_rv"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+    </ProgressBar>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

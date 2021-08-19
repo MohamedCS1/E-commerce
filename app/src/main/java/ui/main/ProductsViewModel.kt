@@ -3,13 +3,15 @@ package ui.main
 import Data.Client_Product
 import Pojo.Product_Model
 import android.util.Log
+import android.view.View
+import android.widget.ProgressBar
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ProductsViewModel :ViewModel() {
+class ProductsViewModel() :ViewModel() {
 
     val MutableLiveDataProduct = MutableLiveData<List<Product_Model>>()
 
@@ -23,7 +25,6 @@ class ProductsViewModel :ViewModel() {
             ) {
 
                MutableLiveDataProduct.value = response.body()
-
             }
 
             override fun onFailure(call: Call<List<Product_Model>>, t: Throwable) {
@@ -46,7 +47,6 @@ class ProductsViewModel :ViewModel() {
                 response: Response<List<Product_Model>>
             ) {
 
-                Log.d("size",response.body()!!.size.toString())
                 MutableLiveDataProduct.value = response.body()
 
             }

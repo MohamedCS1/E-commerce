@@ -2,11 +2,11 @@ package ui.main
 
 import Pojo.Product_Model
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
-import androidx.core.graphics.drawable.RoundedBitmapDrawable
+import android.widget.ProgressBar
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,10 +14,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ecommerce.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import ui.Profil.Profil
-import com.bumptech.glide.request.RequestOptions
-
-import com.bumptech.glide.Glide
-import com.google.android.material.shape.RoundedCornerTreatment
 
 
 class MainActivity : AppCompatActivity() {
@@ -48,9 +44,12 @@ class MainActivity : AppCompatActivity() {
 
         ProductsViewModel!!.start()
 
+        val progress = findViewById<ProgressBar>(R.id.prgress_rv)
+
         ProductsViewModel!!.MutableLiveDataProduct.observe(this,
             object : Observer<List<Product_Model>> {
                 override fun onChanged(t: List<Product_Model>?) {
+                    progress.visibility = View.INVISIBLE
                     adapter!!.setList(t as ArrayList<Product_Model>)
                 }
 
@@ -59,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         val rv_categories = findViewById<RecyclerView>(R.id.rv_categories)
 
-        val adapter_rv_categories = Adapter_categories(this, this,rv,rv_categories)
+        val adapter_rv_categories = Adapter_categories(this, this,rv,rv_categories,progress)
 
         val list_categories = arrayListOf<String>()
 

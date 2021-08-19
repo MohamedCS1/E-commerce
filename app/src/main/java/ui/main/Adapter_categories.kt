@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.lifecycle.LifecycleOwner
@@ -15,13 +16,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ecommerce.R
 import kotlin.collections.ArrayList
 
-class Adapter_categories(context: Context, val owner: LifecycleOwner, val rv:RecyclerView, val rv_categories:RecyclerView): RecyclerView.Adapter<Adapter_categories.ViewHolderCategories>() {
+class Adapter_categories(context: Context, val owner: LifecycleOwner, val rv:RecyclerView, val rv_categories:RecyclerView,val progress:ProgressBar): RecyclerView.Adapter<Adapter_categories.ViewHolderCategories>() {
 
     private var arraylist = arrayListOf<String>()
 
     var raw_index = 0
 
     var ProductsViewModel:ProductsViewModel? = null
+
 
     val adapter = Adapter_Products(context)
 
@@ -39,6 +41,10 @@ class Adapter_categories(context: Context, val owner: LifecycleOwner, val rv:Rec
             @SuppressLint("NotifyDataSetChanged")
             override fun onClick(v: View?) {
 
+                adapter.clear_array()
+
+                progress.visibility = View.VISIBLE
+
                 raw_index = position
                 ProductsViewModel = ProductsViewModel()
 
@@ -53,11 +59,13 @@ class Adapter_categories(context: Context, val owner: LifecycleOwner, val rv:Rec
                             ProductsViewModel!!.start()
                             rv.adapter = adapter
                             adapter.setList(t as ArrayList<Product_Model>)
+                            progress.visibility = View.INVISIBLE
                         }
                         else
                         {
                             rv.adapter = adapter
                             adapter.setList(t as ArrayList<Product_Model>)
+                            progress.visibility = View.INVISIBLE
                         }
 
 
