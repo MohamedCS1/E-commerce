@@ -1,14 +1,24 @@
 package ui.main
 
 import Pojo.Product_Model
+import android.content.Intent
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
+import androidx.core.graphics.drawable.RoundedBitmapDrawable
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ecommerce.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import ui.Profil.Profil
+import com.bumptech.glide.request.RequestOptions
+
+import com.bumptech.glide.Glide
+import com.google.android.material.shape.RoundedCornerTreatment
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -70,6 +80,12 @@ class MainActivity : AppCompatActivity() {
 
         bu_scroll_top.setOnClickListener {
             rv.smoothScrollToPosition(0)
+        }
+
+        val bu_profil = findViewById<ImageView>(R.id.bu_profil)
+
+        bu_profil.setOnClickListener {
+            startActivity(Intent(this,Profil::class.java))
         }
 
     }

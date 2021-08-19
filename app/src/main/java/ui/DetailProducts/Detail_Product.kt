@@ -1,20 +1,21 @@
 package ui.DetailProducts
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
+import android.util.Log
+import android.widget.*
+import androidx.core.graphics.drawable.toBitmap
 import com.example.ecommerce.R
 
-import android.widget.TextView
 import com.bumptech.glide.Glide
 
 
 class Detail_Product : AppCompatActivity() {
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_product)
@@ -25,6 +26,7 @@ class Detail_Product : AppCompatActivity() {
         val image_view = findViewById<ImageView>(R.id.imageView_d)
         val bu_call = findViewById<Button>(R.id.bu_call)
         val bu_back = findViewById<ImageButton>(R.id.bu_back)
+        val bu_save = findViewById<ImageView>(R.id.bu_save)
 
         val bundle = intent.extras
 
@@ -48,6 +50,25 @@ class Detail_Product : AppCompatActivity() {
 
         bu_back.setOnClickListener {
             onBackPressed()
+        }
+
+        var bol:Boolean = true
+        bu_save.setOnClickListener {
+
+            if (bol)
+            {
+                bu_save.setImageDrawable(getDrawable(R.drawable.saved))
+                Toast.makeText(this,"saved successfully!",Toast.LENGTH_SHORT).show()
+                bol = false
+            }
+            else
+            {
+                bu_save.setImageDrawable(getDrawable(R.drawable.save))
+                bol = true
+                Toast.makeText(this,"Save has been cancelled",Toast.LENGTH_SHORT).show()
+
+            }
+
         }
     }
 }
